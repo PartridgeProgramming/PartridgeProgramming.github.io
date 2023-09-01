@@ -1,5 +1,18 @@
+/*
+Color schema for main page:
+#304269
+#91BED4
+#D9E8F5
+#FFFFFF
+#F26101
+*/
 /* Structure */
-
+h1, h2 {
+    color:#304269;
+}
+p, li {
+    color: #454545;
+}
 /* Tables */
 td, th {
     border:3px solid red;
@@ -8,7 +21,33 @@ td, th {
 
 /* Typography, also known as fonts */
 body {
+    background-color: #D9E8F5;
     font-family: Arial, Helvetica, sans-serif;
     /* Bigger text because I prefer it */
     font-size: larger;
+}
+#content {
+    text-align: justify;
+    background-color: #c3d1dd;
+    width: 60%;
+}
+/* Links */
+/* Unvisited */
+a:link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+/* Visited  */
+a:visited {
+    color: #F26101;
+    text-decoration: none;
+}
+/* Mouse over */
+a:hover {
+    color: #cccccc;
+    text-decoration: none;
+}
+/* Selected link */
+a:active {
+    text-decoration: none;
 }
