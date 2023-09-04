@@ -1,18 +1,49 @@
 /*
-Color schema: 
+Color schema: same as main page
 */
 /* Structure */
 h1, h2 {
     color:#304269;
 }
+h1 {
+    text-align: center;
+}
 p, li {
     color: #454545;
 }
+/* Navigation */
+#navigation {
+    text-align: center;
+}
+/* Pictures */
+
+#picture_1 {
+    text-align: center;
+    border: 1px solid black;
+    padding: 1px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+/* */
+#picture_2 {
+    border: 1px solid black;
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
 /* Tables */
-td, th {
-    border:3px solid red;
+#table table {
     border-collapse: collapse;
 }
+#table td, th{
+    border:2px solid; 
+    border-color: #F26101;
+}
+
 
 /* Typography, also known as fonts */
 body {
