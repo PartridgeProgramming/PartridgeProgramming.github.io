@@ -1,6 +1,3 @@
-/*
-Color schema: same as main page
-*/
 /* Structure */
 h1, h2 {
     color:#304269;
@@ -21,12 +18,14 @@ p, li {
     text-align: center;
     border: 1px solid black;
     padding: 1px;
-    display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 50%; 
+    display: block;
 }
-/* */
+
 #picture_2 {
     border: 1px solid black;
     padding: 10px;

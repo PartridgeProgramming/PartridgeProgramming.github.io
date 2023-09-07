@@ -1,0 +1,130 @@
+/* Structure */
+body {
+    background-color: azure;
+}
+#main-header {
+    background-color: bisque;
+}
+#main-content {
+    /* background-color: cadetblue; */
+}
+#main-footer {
+    background-color: honeydew;
+    text-align: center;
+}
+
+.padded-area {
+    padding: 5px;
+    margin: auto;
+}
+
+/* Main content formatting, currently does NOTHING*/
+#main-content table {
+    border-collapse: separate;
+    border-spacing: 5px 0;
+}
+#main-content td {
+    border: none;
+    padding: 5px;
+}
+#main-content-table {
+    background-color: cadetblue;
+}
+#columns {
+    background-color: aquamarine;
+    width: 100%;
+}
+#columns table {
+    border-collapse: collapse;
+}
+
+#columns th, td {
+    /* border: 1px solid black; */
+    padding: 10px; /* Add padding to the cells for spacing */
+}
+
+/* Add a class to the cells in the second column */
+.second-column {
+    /* Adjust the width to create empty space */
+    width: 30%;
+}
+
+.textbox1 {
+    border: 4px solid black;
+    border-collapse: collapse;
+}
+#images {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#images img {
+    margin-right: 50px;
+}
+
+/* Info */
+.info {
+    border: 2px solid chocolate;
+    background-color: lightblue;
+}
+
+.info header {
+    background-color: blueviolet;
+    margin: 0 auto;
+}
+
+/* Main Navigation */
+#main-nav ul {
+    padding-left: 0px;
+    display: block;
+    text-align: center;
+}
+
+#main-nav li {
+    list-style-type: none;
+}
+
+#main-nav a {
+    text-decoration: none;
+    color:black;
+}
+#main-nav a:hover {
+    border-bottom: 1px solid magenta;
+    opacity: 50%;
+}
+
+.flex-container {
+    display: flex;
+    background-color: cadetblue;;
+  }
+  
+  .flex-container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+  }
+
+
+
+/* Typography */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+h1 {
+    text-align: center;
+}
+/* Larger Resolutions */
+@media only screen and (min-width: 600px) {
+    #main-nav li {
+        display: inline-block;
+    }
+    .columns {
+        display: flex;
+    }
+    .collof2 {
+        flex: 1;
+    }
+}
