@@ -13,12 +13,19 @@ h1, h2 {
 p, li {
     color: #454545;
 }
-/* Tables */
-td, th {
-    border:3px solid red;
-    border-collapse: collapse;
+/* Flex container */
+.flex-container {
+    display: flex;
 }
-
+.flex-container > div {
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px; 
+}
+/* Assignment */
+.assignment {
+    background-color: #7393B3;
+}
 /* Typography, also known as fonts */
 body {
     background-color: #D9E8F5;
@@ -33,6 +40,9 @@ body {
     margin: auto;
     padding: 1px 5px;
     border-radius: 10px;
+}
+h2 {
+    text-align: center;
 }
 /* Links */
 /* Unvisited */
@@ -54,3 +64,11 @@ a:hover {
 a:active {
     text-decoration: none;
 }
+/* Smaller resolutions */
+@media only screen and (max-width: 1000px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
