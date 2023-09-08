@@ -44,6 +44,9 @@ body {
 h2 {
     text-align: center;
 }
+#main-footer {
+    text-align: center;
+}
 /* Links */
 /* Unvisited */
 a:link {
