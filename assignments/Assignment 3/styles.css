@@ -87,10 +87,6 @@ h1 {
 }
 /* Larger Resolutions */
 @media only screen and (max-width: 800px) {
-    /* Tempary thing to make testing easier */
-    body{
-        background-color: black;
-    }
     #main-nav li {
         display: flex;
         flex-direction: column;
