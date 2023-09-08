@@ -21,7 +21,7 @@
         </header>
         <main id="main-content" class="padded-area">
             <header id="content-header">
-                <div id="paragraph&sidebar" class="flex-container">
+                <div id="paragraph_sidebar" class="flex-container">
                     <div id="paragraph">
                         <h2>Main content</h2>
                         <p>Duis ea consequat nisi est sint laboris non ut aute aliqua. 
@@ -31,74 +31,46 @@
                     </div>
                     <div id="sidebar">
                         <h2>Sidebar</h2>
-                        <ul style="float:right">
+                        <ul>
                             <li>Item 1</li>
                             <li>Item 2</li>
                             <li>Item 3</li>
                         </ul>
                     </div>
                 </div>
-                <div id="columns" class="flex-container">
-                    <div id="collum1of2">
+                <section id="columns" class="flex-container">
+                    <div id="collum1of2" class="bordered">
                         <h2>Column 1 of 2</h2>
                         <div id="collum1of2Contents" class="flex-container">
-                            <div class="nestedColumn">
+                            <div class="bordered columnContent">
                                 <p>Nostrud irure commodo sunt adipisicing aliquip ipsum officia.</p>
                             </div>
-                            <div>
+                            <div class="bordered columnContent">
                                 <p>Voluptate minim do in in in magna ipsum cillum tempor eu reprehenderit nisi et.</p>
+                            </div>
+                            <div class="bordered columnContent">
+                                <p>Aliquip ad nisi aliqua aute nulla enim occaecat deserunt aliquip id dolore tempor exercitation.</p>
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div id="collum2of2" class="bordered">
                         <h2>Column 2 of 2</h2>
+                        <div id="collum2of2Contents" class="flex-container">
+                            <div class="bordered columnContent">
+                                <p>Ad incididunt ex duis ex consequat dolor do esse dolor ipsum Lorem.</p>
+                            </div>
+                            <div class="bordered columnContent">
+                                <p>Non qui proident duis cillum aliqua anim reprehenderit in occaecat.</p>
+                            </div>
+                            <div class="bordered columnContent">
+                                <p>Non id et eiusmod do dolore exercitation est eiusmod voluptate veniam.</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!--Table for text layout-->
-                <!--
-                <table id="main-content-table">
-                    <tr>
-                        <th>Main content</th>
-                        <th>Sidebar</th>
-                    </tr>
-                    <tr>
-                        <td id="main-content-paragraph"><p>Duis ea consequat nisi est sint laboris non ut aute aliqua. 
-                            Aliquip magna adipisicing reprehenderit mollit aliquip adipisicing laborum voluptate non.
-                            Ipsum ad occaecat est aute aute consequat mollit esse. 
-                            Sint duis minim veniam laboris.</p></td>
-                        <td id="main-content-sidebar">
-                            <ul id="sidebar" style="float:right">
-                                <li>Item 1</li>
-                                <li>Item 2</li>
-                                <li>Item 3</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </table>
-                <table id="columns">
-                    <tr>
-                        <th class="textbox1">Column 1 of 2</th>
-                        <th>Column 2 of 2</th>
-                    </tr>
-                    <tr>
-                        <td class="textbox1">Eiusmod sint cupidatat culpa aliqua incididunt ullamco nostrud occaecat.</td>
-                        <td>Ut id aliquip anim veniam sunt proident.</td>
-                        
-                    </tr>
-                    <tr>
-                        <td class="textbox1">Non do amet nostrud reprehenderit ullamco tempor nulla quis amet Lorem.</td>
-                        <td>Culpa incididunt occaecat aliqua qui elit irure non do duis ad pariatur sunt.</td>
-                        
-                    </tr>
-                    <tr>
-                        <td class="textbox1">Esse nostrud qui pariatur sint quis anim.</td>
-                        <td>Lorem et amet officia labore eiusmod dolor.</td>
-                    </tr>
-                </table>
-            -->
+                </section>
             </header>
             <!--Pictures-->
-            <div id="images">
+            <div id="images" class="flex-container">
                 <img src="placeholder320x100.gif" alt="A placeholder image that is 320x100">
                 <img src="placeholder320x100.gif" alt="A placeholder image that is 320x100">
                 <img src="placeholder320x100.gif" alt="A placeholder image that is 320x100">
@@ -106,6 +78,8 @@
         </main>
         <!--Fake address for footer based on layout sheet-->
         <footer id="main-footer" class="padded-area">
+            <h2>Footer</h2>
+            <p>Copyright: Do adipisicing aute velit excepteur ullamco dolore pariatur.</p>
             <p>State: Texas<br>
             City: Kristianchester<br>
             Address: 1267 Schaden Hill</p>
