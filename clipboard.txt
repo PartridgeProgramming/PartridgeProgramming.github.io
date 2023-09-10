@@ -1,0 +1,4 @@
+.MainContentLink {
+    background-color: white;
+    color:#73000A;
+}

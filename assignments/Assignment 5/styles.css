@@ -1,0 +1,190 @@
+
+/* Typography, also known as fonts */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Bigger text because I prefer it */
+    font-size: larger;   
+}
+.nav-text {
+    color: white;
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+
+#main-header, 
+#main-footer {
+    margin:auto;
+    width:80%;
+    background-color: black;
+    padding: 5px;
+}
+
+#main-footer, 
+#main-footer a {
+    color: white;
+    background-color: maroon;
+}
+
+#main-footer li {
+    list-style-type: none;
+}
+#main-footer ul {
+    padding-left: 1%;
+}
+#main-footer a{
+    text-decoration: none;
+}
+/* Horizontal navigation */
+
+.horizontal-nav ul {
+    padding-left: 0px;
+}
+.horizontal-nav li {
+    list-style-type: none;
+    margin: 0 5px;
+}
+.horizontal-nav a {
+    text-decoration: none;
+}
+
+/* Main navigation */
+#main-nav {
+    text-align: center;
+}
+/* Content header */
+#content-header h1 {
+    background-color: #73000A;
+}
+#content-header p{
+    color:black;
+}
+/* Video and Paragraph */
+#videoAndParagraph h1,
+p{
+    color: white;
+}
+#paragraphBox {
+    background-color: #73000A;
+}
+/* Paragraph and Image */
+#paragraphAndImage {
+    background-color: black;
+}
+#paragraphAndImage h2,
+p {
+    margin: 5%;
+    color:white;
+}
+/* Formatting for links in the main body */
+.MainContentLink {
+    margin: 45%;
+    text-align: center;
+    font-size: larger;
+    border: 2px white solid;
+    background-color: #73000A;
+    color: white;
+    text-decoration: none;
+}
+/* Reseach Highlights */
+#ResearchHighlights {
+    display: flex;
+    flex-direction: row;
+}
+#ResearchHighlightHeader {
+    text-align: center;
+    color:#73000A;
+}
+#ResearchHighlights a{
+    text-decoration: none;
+}
+#ResearchHighlights p{
+    color: black;
+}
+/*Image and Paragraph class*/
+.imageAndParagraph {
+    background-color: #ECECEC;
+}
+.imageAndParagraph li{
+    list-style-type: none;
+    list-style: none;
+}
+.imageAndParagraph img{
+    margin-left: 10%;
+}
+.imageAndParagraph h1 {
+    color:#73000A;
+}
+.imageAndParagraph p{
+    color:black;
+}
+/* Image and Paragraph 2 */
+#imageAndParagraph2 {
+    background-color: #73000A;
+}
+#imageAndParagraph2 h1 {
+    color: white;
+}
+/* For some reason, when I combine the following wtih the above p doesn't get changed */
+#imageAndPartagraph p {
+    color: white;
+}
+#imageAndParagraph2 a{
+    background-color: black;
+}
+/* Image and paragraph 4 */
+#imageAndParagraph4 {
+    background-color: #1F414D;
+}
+#imageAndParagraph4 h1{
+    color: white;
+}
+#imageAndParagraph4 p{
+    color: white;
+}
+/* cornerTextWithBackgroundImage */
+#cornerTextWithBackgroundImage {
+    background: url(https://place-hold.it/1600x1200);
+    /* background-repeat: no-repeat; */
+    background-size: auto;
+}
+#cornerBox {
+    background-color: #73000A;
+    color: white;
+    position: absolute;
+    margin: 0;
+}
+#cornerBox a{
+    background-color: black;
+}
+/* Image and Paragraph 5 */
+#imageAndParagraph5 {
+    background-color: white;
+}
+.flex-container {
+    display: flex;
+}
+/* Larger Resolution */
+@media only screen and (min-width: 768px) {
+    .horizontal-nav ul, 
+    .flex-container {
+        display: flex;
+    }
+
+    #main-nav ul {
+        justify-content: center;
+    }
+
+    #user-nav ul {
+        justify-content: flex-end;
+    }
+
+    .flex-container {
+        justify-content: space-between;
+    }
+
+    .coll1of2 {
+        flex: 1;
+    }
+}
