@@ -146,14 +146,18 @@ p {
 /* cornerTextWithBackgroundImage */
 #cornerTextWithBackgroundImage {
     background: url(https://place-hold.it/1600x1200);
-    /* background-repeat: no-repeat; */
-    background-size: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10%;
+    text-align: left;
 }
 #cornerBox {
     background-color: #73000A;
     color: white;
-    position: absolute;
-    margin: 0;
+    margin-top: 20%;;
+    margin-right: 50%;
+    padding-bottom: 2%;
 }
 #cornerBox a{
     background-color: black;
@@ -164,6 +168,11 @@ p {
 }
 .flex-container {
     display: flex;
+    flex-wrap: nowrap;
+}
+/* Main footer */
+#main-footer{
+    flex-direction: column;
 }
 /* Larger Resolution */
 @media only screen and (min-width: 768px) {

@@ -1,4 +1,67 @@
-.MainContentLink {
-    background-color: white;
-    color:#73000A;
-}
+<section class="coll1of2">
+                <img id="logo" src="https://place-hold.it/75x75/fff">
+                <span class="footer-logo-text">This is my text</span>
+                <h3>This is my main heading.</h3>
+                <hr>
+
+                <div class="flex-container">
+                    <div>
+                        <ul>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                        </ul>
+                    </div>
+                    <ul>
+                        <!--This spot is purposely left blank-->
+                    </ul>
+                    <div>
+                        <ul>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                        </ul>
+                    </div>
+                    <ul>
+                        <!--This spot is purposely left blank-->
+                   </ul>
+                    <div>
+                        <ul>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                            <li><a href="#">Some random text</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="coll2of2">
+
+            </section>
