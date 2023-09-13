@@ -1,0 +1,46 @@
+/* Typography, also known as fonts */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Bigger text because I prefer it */
+    font-size: larger;    
+}
+li {
+    list-style-type: none;
+    list-style: none;
+}
+h1, h3 {
+    text-align: center;
+    background-color: beige;
+}
+/* Flex container */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+.flex-container > div {
+    padding: 1%;
+    border: 5px solid #6495ED;
+    background-color: #F0FFFF;
+}
+.flex-container > div h2 {
+    text-align: center;
+}
+/* Comments */
+#comments {
+    background-color: #FFEBCD;
+}
+#comments h3 {
+    color:#B9AAEC;
+}
+/* Hide class */
+.hide {
+    display: none;
+}
+
+/* Smaller resolutions */
+@media only screen and (max-width: 1000px) {
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+    }
+}
