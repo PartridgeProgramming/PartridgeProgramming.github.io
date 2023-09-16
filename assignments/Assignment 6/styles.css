@@ -13,6 +13,7 @@ h1, h3 {
     background-color: beige;
 }
 /* Flex container */
+
 .flex-container {
     display: flex;
     flex-direction: row;
@@ -25,16 +26,46 @@ h1, h3 {
 .flex-container > div h2 {
     text-align: center;
 }
+
 /* Comments */
+
 #comments {
     background-color: #FFEBCD;
 }
 #comments h3 {
     color:#B9AAEC;
+    background-color: #FFEBCD;
+    text-align: left;
 }
+
 /* Hide class */
+
 .hide {
     display: none;
+}
+
+/* Dance class */
+
+.dancing {
+    position: relative;
+    animation-name: anim-heart;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes anim-heart{
+    0% {
+        transform: none;
+    }
+    33% {
+        transform: skewX(45deg);
+    }
+    66% {
+        transform: skewY(30deg);
+    }
+    100% {
+        transform: none;
+    }
 }
 
 /* Smaller resolutions */
