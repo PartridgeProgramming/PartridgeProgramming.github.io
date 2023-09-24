@@ -68,6 +68,10 @@ a:active {
 }
 
 /* Hide classes */
+.hidden {
+    display: none;
+}
+
 .exercise-hide {
     display: none;
 }
@@ -86,6 +90,10 @@ label {
 }
 .columned {
     display: flex;
+}
+/* Exercise 2 */
+#fund-raising-error {
+    color: red;
 }
 /* Larger resolutions */
 @media screen and (min-width: 480px) {

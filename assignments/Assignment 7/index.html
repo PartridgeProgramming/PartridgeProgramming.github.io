@@ -17,17 +17,17 @@
             <!--Exercises nav-->
             <div id="exercises" class="flex-container exercise-hide">
                 <div id="exercise-1">
-                    <a href="#">Exercise 1</a>
+                    <a href="#" id="exercise-1-link">Exercise 1</a>
                 </div>
                 <div id="exercise-2">
-                    <a href="#">Exercise 2</a>
+                    <a href="#" id="exercise-2-link">Exercise 2</a>
                 </div>
             </div>
         </header>
 
         <main>
             <!--Exercise 1-->
-            <div id="exercise-1-main">
+            <div id="exercise-1-main" class="hidden">
                 <h2>Who's the Oldest</h2>
                 <p class="columned">
                     <label for="name-1-txt">Name 1:</label>
@@ -35,7 +35,7 @@
                 </p>
                 <p class="columned">
                     <label for="age-1-txt">Age 1:</label>
-                    <input type="number" id="age-1-txt">
+                    <input type="number" id="age-1-txt" min="1">
                 </p>
                 <p class="columned">
                     <label for="name-2-txt">Name 2:</label>
@@ -43,7 +43,7 @@
                 </p>
                 <p class="columned">
                     <label for="age-2-txt">Age 2:</label>
-                    <input type="number" id="age-2-txt">
+                    <input type="number" id="age-2-txt" min="1">
                 </p>
                 <p class="columned">
                     <label for="name-3-txt">Name 3:</label>
@@ -51,7 +51,7 @@
                 </p>
                 <p class="columned">
                     <label for="age-3-txt">Age 3:</label>
-                    <input type="number" id="age-3-txt">
+                    <input type="number" id="age-3-txt" min="1">
                 </p>
                 <button id="age-compare-button">Compare Ages</button>
                 <div id="orderedAges">
@@ -59,17 +59,20 @@
                 </div>
             </div>
             <!--Exercise 2-->
-            <div id="exercise-2-main">
+            <div id="exercise-2-main" class="hidden">
                 <h2>Fund Raising</h2>
                 <h3>Goal: 10,000.00</h3>
                 <div>
                     <p>
                         <label for="fund-raising-txt">Funds Raised</label>
-                        <input type="number" id="fund-raising-txt">
+                        <input type="number" id="fund-raising-txt" min="1" max="10000">
+                        <div>
+                            <p id="fund-raising-error"></p>
+                        </div>
                     </p>
                 </div>
                 <div>
-                    <button>Display</button>
+                    <button id="display-button">Display</button>
                 </div>
             </div>
         </main>
