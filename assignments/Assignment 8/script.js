@@ -42,14 +42,6 @@ const startManRunning = () => {
     const root = document.querySelector(":root");
     document.getElementById("man").src="stick-man-running.svg";
 
-    
-    /*
-    for (i = 0; i < 30; i++) {
-        console.log("i=" + i);
-        document.getElementById("man").style.marginRight = i+"%";
-        //root.style.setProperty("--man-left-margin", i + "vi");
-    }
-    */
     let count = 0;
     const interval = setInterval(() => {
         console.log("count=" + count);
@@ -57,7 +49,7 @@ const startManRunning = () => {
         count++;
 
         if (count == 30) {
-            count = 0;
+            clearInterval(interval);
         }
     },100);
     

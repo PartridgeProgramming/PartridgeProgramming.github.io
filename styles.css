@@ -23,14 +23,7 @@ p {
     margin-inline-end: 0px;
 }
 
-/* Flex container */
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.flex-container div {
+section {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
@@ -92,18 +85,12 @@ a:active {
 
 /* Larger resolutions */
 @media only screen and (min-width: 600px) {
-    .flex-container {
-        display: flex;
-        flex-wrap: wrap;
-        flex: 20%;
-        flex-grow: 0;
-    }
     .columns {
         display: flex;
         flex-wrap: wrap;
     }
-    .items div {
-        flex: 1;
+    .items section {
+        flex: 25%;
         flex-grow: 0;
     }
 }
