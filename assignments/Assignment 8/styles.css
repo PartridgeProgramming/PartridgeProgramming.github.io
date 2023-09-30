@@ -1,0 +1,69 @@
+/* Root */ 
+:root {
+    --background-color: lightblue;
+    --background-color-running-man: rgba(0, 0, 0, 0.8);
+    --box-background-color: white;
+    --box-empty: 0%;
+    --man-left-margin: 0;
+}
+
+/* Typography, also known as fonts */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    /* Bigger text because I prefer it */
+    font-size: larger;    
+}
+
+/* Running */
+#running-man-container {
+    background-color: var(--background-color-running-man);
+}
+#running-box {
+    margin: auto;
+    position: absolute;
+    left: 10vi;
+}
+#man {
+    margin-left: var(--man-left-margin);
+    /* var(--man-left-margin) */
+}
+/* Flexbox */
+.flexbox {
+    display: flex;
+    flex-direction: column;
+}
+/* Thereometer */
+#thereometer {
+    padding: 1%;
+    padding-left: 4%;;
+    background-color: var(--background-color);
+}
+
+#fund-raising-error {
+    color: red;
+}
+
+#box {
+    margin-left: 5%;
+    background-color: var(--box-background-color);
+    width: 100px;
+    height: 600px;
+    border: 1px solid black;
+}
+
+#box.filled-box {
+    background: linear-gradient(var(--box-background-color) var(--box-empty), red var(--box-empty) 100%);
+}
+
+/* Larger resolutions */
+@media screen and (min-width: 600px) {
+   .flexbox {
+        flex-direction: row;
+   }
+   #running-man-container {
+        width: 50vi;
+   }
+   #thereometer {
+        width: 50vi;
+   }
+}

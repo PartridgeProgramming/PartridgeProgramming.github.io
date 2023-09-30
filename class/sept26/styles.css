@@ -4,7 +4,3 @@ body {
     /* Bigger text because I prefer it */
     font-size: larger;    
 }
-/* Larger resolutions */
-@media screen and (min-width: 480px) {
-   
-}

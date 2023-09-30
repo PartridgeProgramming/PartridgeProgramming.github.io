@@ -10,22 +10,38 @@ Color schema for main page:
 h1, h2 {
     color:#304269;
 }
+
 p, li {
     color: #454545;
 }
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
 /* Flex container */
 .flex-container {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
-.flex-container > div {
+
+.flex-container div {
+    display: flex;
+    flex-wrap: wrap;
     margin: 10px;
     padding: 20px;
-    font-size: 30px; 
 }
+
 /* Assignment */
 .assignment {
     background-color: #7393B3;
 }
+
 /* Typography, also known as fonts */
 body {
     background-color: #D9E8F5;
@@ -33,45 +49,62 @@ body {
     /* Bigger text because I prefer it */
     font-size: larger;
 }
-#content {
-    text-align: justify;
+
+#main-content {
     background-color: #c3d1dd;
-    width: 60%;
     margin: auto;
     padding: 1px 5px;
     border-radius: 10px;
 }
+
 h2 {
     text-align: center;
 }
+
 #main-footer {
     text-align: center;
 }
+
 /* Links */
+
 /* Unvisited */
 a:link {
     color: #FFFFFF;
     text-decoration: none;
 }
+
 /* Visited  */
 a:visited {
     color: #F26101;
     text-decoration: none;
 }
+
 /* Mouse over */
 a:hover {
     color: #cccccc;
     text-decoration: none;
 }
+
 /* Selected link */
 a:active {
     text-decoration: none;
 }
-/* Smaller resolutions */
-@media only screen and (max-width: 1000px) {
+
+/* Larger resolutions */
+@media only screen and (min-width: 600px) {
     .flex-container {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
+        flex: 20%;
+        flex-grow: 0;
+    }
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .items div {
+        flex: 1;
+        flex-grow: 0;
     }
 }
 

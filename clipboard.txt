@@ -1,67 +1,21 @@
-<section class="coll1of2">
-                <img id="logo" src="https://place-hold.it/75x75/fff">
-                <span class="footer-logo-text">This is my text</span>
-                <h3>This is my main heading.</h3>
-                <hr>
-
-                <div class="flex-container">
-                    <div>
-                        <ul>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                        </ul>
-                    </div>
-                    <ul>
-                        <!--This spot is purposely left blank-->
-                    </ul>
-                    <div>
-                        <ul>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                        </ul>
-                    </div>
-                    <ul>
-                        <!--This spot is purposely left blank-->
-                   </ul>
-                    <div>
-                        <ul>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                            <li><a href="#">Some random text</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="coll2of2">
-
-            </section>
+/*
+        if (funraisingGoal < 25) {
+            console.log("Under 25%");
+        }
+        else if ((funraisingGoal >= 25)&&!(funraisingGoal > 49)) {
+            console.log("Between 25 and 50%");
+            root.style.setProperty("--box-empty", "75%");
+        }
+        else if ((funraisingGoal >= 50)&&!(funraisingGoal > 74)) {
+            console.log("Between 50 and 75%");
+            root.style.setProperty("--box-empty", "50%");
+        }
+        else if ((funraisingGoal >= 75)&&!(funraisingGoal > 99)){
+            console.log("Between 75 and 10%");
+            root.style.setProperty("--box-empty", "25%");
+        }
+        else {
+            console.log("At 100%");
+            root.style.setProperty("--box-empty", "0%");
+        }
+        */
