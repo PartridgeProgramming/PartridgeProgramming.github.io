@@ -24,18 +24,19 @@ const displayFunraising = () => {
         const funraisingGoal = (funraisingAmount/10000)*100;
 
         // Math to get percentage of how much to fill
-        let boxFillAmount = 100-funraisingGoal;
-
-        // Ensure the boxFillAmount is not negative
-        boxFillAmount = Math.max(boxFillAmount, 0);
-
-        console.log("boxFillAmount = " + boxFillAmount);
-        console.log("The amounts given fills in: " + funraisingGoal + "%");
+        //let boxFillAmount = 100-funraisingGoal;
 
         // CSS update
-        root.style.setProperty("--box-empty", boxFillAmount + "%");
-        funraisingBox.classList.add("filled-box");
-        error.innerHTML = ""; // Clear any previous error messages
+        let count = 0;
+        const interval = setInterval(() => {
+            root.style.setProperty("--box-empty", count + "%");
+            if (count >= funraisingGoal) {
+                clearInterval(interval);
+                funraisingBox.classList.add("filled-box");
+                error.innerHTML = ""; // Clear any previous error messages
+            }
+            count++;
+        },25);
     }    
 };
 const startManRunning = () => {
@@ -44,12 +45,12 @@ const startManRunning = () => {
 
     let count = 0;
     const interval = setInterval(() => {
-        console.log("count=" + count);
         root.style.setProperty("--man-left-margin", count + "vi");
         count++;
 
         if (count == 30) {
             clearInterval(interval);
+            document.getElementById("man").src="stick-man-walking.svg";
         }
     },100);
     

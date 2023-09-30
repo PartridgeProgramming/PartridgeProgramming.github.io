@@ -1,3 +1,4 @@
+/* Structure */
 /* Root */ 
 :root {
     --background-color: lightblue;
@@ -18,20 +19,29 @@ body {
 #running-man-container {
     background-color: var(--background-color-running-man);
 }
-#running-box {
-    margin: auto;
-    position: absolute;
-    left: 10vi;
+
+h2 {
+    text-align: center;
 }
+#running-box {
+    background-color: var(--background-color);
+    width: 35vi;
+    border: none;
+    padding: 3.5vi;
+    margin-top: 15vi;
+    margin-left: 3vi;
+}
+
 #man {
     margin-left: var(--man-left-margin);
-    /* var(--man-left-margin) */
 }
+
 /* Flexbox */
 .flexbox {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
+
 /* Thereometer */
 #thereometer {
     padding: 1%;
@@ -52,7 +62,7 @@ body {
 }
 
 #box.filled-box {
-    background: linear-gradient(var(--box-background-color) var(--box-empty), red var(--box-empty) 100%);
+    background: linear-gradient(to top, red var(--box-empty), var(--box-background-color) var(--box-empty) 100%);
 }
 
 /* Larger resolutions */
