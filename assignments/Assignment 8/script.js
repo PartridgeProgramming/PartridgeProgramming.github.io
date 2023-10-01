@@ -23,9 +23,6 @@ const displayFunraising = () => {
         // Math for to find percentage
         const funraisingGoal = (funraisingAmount/10000)*100;
 
-        // Math to get percentage of how much to fill
-        //let boxFillAmount = 100-funraisingGoal;
-
         // CSS update
         let count = 0;
         const interval = setInterval(() => {
