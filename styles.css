@@ -30,6 +30,28 @@ section {
     padding: 20px;
 }
 
+/* Navigation */
+#nav {
+    width: max-content;
+    text-align: center;
+}
+
+#assignments {
+    float: left;
+    width: 100vw;
+    height: 100%;
+}
+
+#project {
+    width: 100%;
+    height: 100%;
+}
+/* Flex Container */
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
 /* Assignment */
 .assignment {
     background-color: #7393B3;
@@ -81,6 +103,11 @@ a:hover {
 /* Selected link */
 a:active {
     text-decoration: none;
+}
+
+/* Hiding classes */
+.hidden {
+    display: none;
 }
 
 /* Larger resolutions */
