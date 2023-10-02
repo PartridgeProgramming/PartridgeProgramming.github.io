@@ -12,6 +12,6 @@ const toggleProject = () => {
     }
 };
 window.onload = () => {
-    document.getElementById("assignment-link").onclick = toggleExercise1;
-    document.getElementById("project-link").onclick = toggleExercise2;
+    document.getElementById("assignment-link").onclick = toggleAssignments;
+    document.getElementById("project-link").onclick = toggleProject;
 };
