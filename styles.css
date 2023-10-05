@@ -23,7 +23,8 @@ p {
     margin-inline-end: 0px;
 }
 
-section {
+/* Section */
+span {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
@@ -55,6 +56,7 @@ section {
 /* Assignment */
 .assignment {
     background-color: #7393B3;
+    max-width: 350px;
 }
 
 /* Typography, also known as fonts */
@@ -70,6 +72,12 @@ body {
     margin: auto;
     padding: 1px 5px;
     border-radius: 10px;
+}
+
+#main-content div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 h2 {
@@ -107,8 +115,9 @@ a:active {
 
 /* Hiding classes */
 .hidden {
-    display: none;
+    display: none !important; 
 }
+
 
 /* Larger resolutions */
 @media only screen and (min-width: 600px) {
