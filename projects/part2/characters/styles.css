@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Flex-container */
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Attribute */
+.attribute {
+    margin: 0.5%;
+    padding: 0.2%;
+    border: 2px solid black;
+}
+
+/* Proficiency-list */
+#proficiency-list {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Skills */
+#skills-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+}
+
+/* Character-nav */
+#character-nav {
+    padding: 2%;
+}
+
+/* Hidden */
+.hidden {
+    display: none;
+}
