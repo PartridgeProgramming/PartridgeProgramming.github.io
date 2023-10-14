@@ -1,0 +1,11 @@
+h2 {
+    border: 2px solid black;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Homebrew creator */
+#homebrew-creator {
+    display: flex;
+    flex-direction: column;
+}

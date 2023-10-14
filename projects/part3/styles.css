@@ -1,0 +1,15 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;  
+}
+
+h1 {
+    text-align: center;
+    background-color: red;
+}
+
+/* Nav */
+#nav a{
+    text-decoration: none;
+    font-size: x-large;
+    padding-left: 30%;
+}
