@@ -4,6 +4,12 @@ body {
     /* Bigger text because I prefer it */
     font-size: larger;    
 }
+
+iframe {
+    margin: auto;
+    display: block;
+    text-align: center;
+}
 /* Larger resolutions */
 @media screen and (min-width: 480px) {
    

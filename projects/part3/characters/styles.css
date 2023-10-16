@@ -11,7 +11,7 @@ h2 {
 /* Flex-container */
 .flex-container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 /* Attribute */
@@ -42,4 +42,11 @@ h2 {
 /* Hidden */
 .hidden {
     display: none;
+}
+
+/* Larger resolutions */
+@media screen and (min-width: 480px) {
+   .flex-container {
+    flex-direction: row;
+   }
 }
