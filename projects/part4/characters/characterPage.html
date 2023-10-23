@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Character</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="../common/common-styles.css">
+        <script src="script.js"></script>
+        <script src="../common/common-script.js"></script>
+        <script src="calculation.js"></script>
+        <script src="pregenCharacters.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="topnav">
+                <p id="nav">Navigation</p>
+                <div id="links">
+                    <a href="../characters/characterPage.html">Character Manager</a>
+                    <a href="../homebrew/homebrewPage.html">Homebrew Manager</a>
+                    <a href="../gameMasters/gameMasterPage.html">Gamemaster Manager</a>
+                    <a href="../contactUs/contactUs.html">Contact Us</a>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <h1 id="create-character">Create Character</h1>
+            <div id="character-creator" class="hidden">
+                <!--Character name and level-->
+                <label for="character-name-txt">Character name</label>
+                <input type="text" id="character-name-txt">
+                <label for="character-level-txt">Character level</label>
+                <input type="number" id="character-level-txt" min="1" max="20" value="1">
+
+                <!--Character race-->
+                <label for="character-race">Character race:</label>
+                <select name="character-race" id="character-race">
+                    <option value="">Select race</option>
+                    <option value="dragonborn">Dragonborn</option>
+                    <option value="dwarf">Dwarf</option>
+                    <option value="elf">Elf</option>
+                    <option value="gnome">Gnome</option>
+                    <option value="half-elf">Half-elf</option>
+                    <option value="half-orc">Half-orc</option>
+                    <option value="halfling">Halfling</option>
+                    <option value="human">Human</option>
+                    <option value="tiefling">Tiefling</option>
+                </select>
+
+                <!--Subrace, dependent on race-->
+                <label for="character-sub-race">Character subrace</label>
+                <select name="character-sub-race" id="character-sub-race">
+                    <option value="">Select subrace</option>
+                </select>
+
+                <!--Character background, I forget this initially-->
+                <!--Also, the SRD only has 1 background apparently but has guidelines to make your own-->
+                <label for="character-background">Background</label>
+                <select name="character-background" id="character-background">
+                    <option value="acolyte">Acolyte</option>
+                    <option value="custom-background">Custom</option>
+                </select>
+                
+                <!--Character class-->
+                <label for="character-class">Character class:</label>
+                <select name="character-class" id="character-class">
+                    <option value="">Select class</option>
+                    <option value="barbarian">Barbarian</option>
+                    <option value="bard">Bard</option>
+                    <option value="cleric">Cleric</option>
+                    <option value="druid">Druid</option>
+                    <option value="fighter">Fighter</option>
+                    <option value="monk">Monk</option>
+                    <option value="paladin">Paladin</option>
+                    <option value="ranger">Ranger</option>
+                    <option value="rogue">Rogue</option>
+                    <option value="sorcerer">Sorcerer</option>
+                    <option value="warlock">Warlock</option>
+                    <option value="wizard">Wizard</option>
+                </select>
+                
+                <!--Subclass, dependant on what character class is. I think I will use JavaScript to fill this out?-->
+                <label for="character-sub-class">Subclass</label>
+                <select name="character-sub-class" id="character-sub-class">
+                    <option value="example-subclass">No class chosen</option>
+                </select>
+                <br><br>
+
+                <!--Attributes-->
+                <h2>Attributes</h2>
+                <div class="flex-container">
+                    <div class="attribute">
+                        <label for="strength-txt">Strength</label>
+                        <input type="number" id="strength-txt" min="3" max="20" value="10">
+                        <br>
+                        <span id="str-mod">Str mod: 0</span>
+                    </div>
+                    <div class="attribute">
+                       <label for="dexerity-txt">Dexerity</label>
+                        <input type="number" id="dexerity-txt" min="3" max="20" value="10">
+                        <br>
+                        <span id="dex-mod">Dex mod: 0</span> 
+                    </div>
+                    <div class="attribute">
+                         <label for="constitution-txt">Constitution</label>
+                        <input type="number" id="constitution-txt" min="3" max="20" value="10">
+                        <br>
+                        <span id="con-mod">Con mod: 0</span>
+                    </div>
+                    <div class="attribute">
+                        <label for="wisdom-txt">Wisdom</label>
+                        <input type="number" id="wisdom-txt" min="3" max="20" value="10">
+                        <br>
+                        <span id="wis-mod">Wis mod: 0</span>
+                    </div>
+                    <div class="attribute">
+                        <label for="intelligence-txt">Intelligence</label>
+                        <input type="number" id="intelligence-txt" min="3" max="20" value="10">
+                        <br>
+                        <span id="int-mod">Int mod: 0</span>
+                    </div>
+                    <div class="attribute">
+                        <label for="charisma-txt">Charisma</label>
+                        <input type="number" id="charisma-txt" min="3" max="20" value="10">
+                        <br>
+                        <span id="cha-mod">Cha mod: 0</span>
+                    </div>
+                </div>
+                
+
+                <div class="flex-container">
+                    <!--Proficiencies-->
+                    <div id="proficiency-list">
+                        <h3>Proficiencies</h3>
+                        <h4>Weapon Proficiencies</h4>
+                        <span class="proficiency">
+                            <label for="weapons"></label>
+                            <textarea id="weapons"></textarea>
+                        </span>
+                        <h4>Armor Proficiencies</h4>
+                        <span class="proficiency">
+                            <label for="armor"></label>
+                            <textarea id="armor"></textarea>
+                        </span>
+                        <h4>Tool Proficiencies</h4>
+                        <span class="proficiency">
+                            <label for="tools"></label>
+                            <textarea id="tools"></textarea>
+                        </span>
+                        <h4>Language Proficiencies</h4>
+                        <span class="proficiency">
+                            <label for="languages"></label>
+                            <textarea id="languages"></textarea>
+                        </span>
+                    </div>
+                    
+                    <!--Skills and proficiency bonus-->
+                    <!--Proficiency bonus will be calculated using JavaScript-->
+                    <div id="skills-list">
+                        <h4>Skills</h4>
+                        <label for="prof-bonus">Proficiency Bonus:</label>
+                        <span id="prof-bonus">+2</span>
+                        <span class="skill">
+                            <input type="checkbox" id="acrobatics">
+                            <span>+0</span>
+                            <label for="acrobatics">Acrobatics: Dex</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="animal-handing">
+                            <span>+0</span>
+                            <label for="animal-handing">Animal Handing: Wis</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="arcana">
+                            <span>+0</span>
+                            <label for="arcana">Arcana: Int</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="athletics">
+                            <span>+0</span>
+                            <label for="athletics">Athletics: Str</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="deception">
+                            <span>+0</span>
+                            <label for="deception">Deception: Cha</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="history">
+                            <span>+0</span>
+                            <label for="history">History: Int</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="insight">
+                            <span>+0</span>
+                            <label for="insight">Insight: Wis</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="intimidation">
+                            <span>+0</span>
+                            <label for="intimidation">Intimidation: Cha</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="investigation">
+                            <span>+0</span>
+                            <label for="investigation">Investigation: Int</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="medicine">
+                            <span>+0</span>
+                            <label for="medicine">Medicine: Wis</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="nature">
+                            <span>+0</span>
+                            <label for="nature">Nature: Int</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="perception">
+                            <span>+0</span>
+                            <label for="perception">Perception: Wis</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="performance">
+                            <span>+0</span>
+                            <label for="performance">Performance: Cha</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="persuasion">
+                            <span>+0</span>
+                            <label for="persuasion">Persuasion: Cha</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="religion">
+                            <span>+0</span>
+                            <label for="religion">Religion: Int</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="sleight-of-hand">
+                            <span>+0</span>
+                            <label for="sleight-of-hand">Sleight of Hand: Dex</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="stealth">
+                            <span>+0</span>
+                            <label for="stealth">Stealth: Dex</label>
+                        </span>
+                        <span class="skill">
+                            <input type="checkbox" id="survival">
+                            <span>+0</span>
+                            <label for="survival">Survival: Wis</label>
+                        </span>
+                    </div>
+
+                    <!--Nav bar for character-->
+                    <div id="character-nav">
+                        <a href="#">Actions</a>
+                        <a href="#">Spells</a>
+                        <a href="#">Inventory</a>
+                        <a href="#">Features</a>
+                        <a href="#">Notes</a>
+                        <div id="shown-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <button>Save character</button>
+            </div>
+            
+            <h1 id="manage-character">Manage Character(s)</h1>
+            <div id="manage-character-div" class="hidden">
+                <span class="premade-characters">
+                    <h3 id="elara" class="pregen character">Pregen - Elara, High Elf Wizard</h3>
+                    <h3 id="thrain" class="pregen character">Pregen - Thrain, Dwarf Fighter</h3>
+                    <h3 id="sylas" class="pregen character">Pregen - Sylas, Half-elf Rogue</h3>
+                    <h3 id="aria" class="pregen character">Pregen - Aria, Human Cleric</h3>
+                    <h3 id="drakar" class="pregen character">Pregen - Drakar, Dragonborn Paladin</h3>
+                </span>
+                <span class="user-made-characters">
+
+                </span>
+            </div>
+        </main>
+
+        <footer>
+            
+        </footer>
+    </body>
+</html>
