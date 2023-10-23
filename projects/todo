@@ -1,0 +1,8 @@
+From project part 2:
+You should have a list of different characters, and be able to zoom into see the details of them.  We discussed in class how all this should be implemented in this deliverable. 
+
+Finish part 3:
+Add all the images to your website (Don't break copyright laws). All images need to look professional, no stretching...
+Update all text to no longer be lorem ipsum and have appropriate text
+Add a color scheme, This must be tasetful, appropriate, match a logo (if you have one). I would run this by friends and get feedback.
+Everything has to scroll flawlessly, no images should exceed the space, everything should look good on all resolutions. You may need multiple media queries.

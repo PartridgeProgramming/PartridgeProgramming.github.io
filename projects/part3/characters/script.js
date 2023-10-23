@@ -11,6 +11,11 @@ const showOrHideCharacterCreator = () => {
     document.getElementById("character-creator").classList.toggle("hidden");
 };
 
+/* Toggle for character manager */
+const showOrHideCharacterManager = () => {
+    document.getElementById("manage-character-div").classList.toggle("hidden");
+};
+
 /* Determines what subraces you can choose based on what race you choose */
 const determineSubRaces = () => {
     const race = document.getElementById("character-race").value;
@@ -39,12 +44,12 @@ const determineSubRaces = () => {
         addOption(subRaceList, "rock-gnome", "Rock Gnome");
     }
     else if ((race=="half-elf")||(race=="half-orc")||(race=="tiefling")||(race=="human")) {
-        addOption(subRaceList, "", race + " lacks a subrace");
+        addOption(subRaceList, "no subrace");
     }
     else {
         addOption(subRaceList, "unknown", "Unable to find subrace");
     }
-}
+};
 
 /* Calculate ability modifiers */
 const calculateStrMod = () => {
@@ -59,7 +64,7 @@ const calculateStrMod = () => {
 
     // Display modifier
     strModHTML.innerHTML = `Str mod: ${strMod}`;      
-}
+};
 
 const calculateDexMod = () => {
     // Get the values of the attributes
@@ -73,7 +78,7 @@ const calculateDexMod = () => {
 
     // Display modifier
     dexModHTML.innerHTML = `Dex mod: ${dexMod}`;      
-}
+};
 
 const calculateConMod = () => {
     // Get the values of the attributes
@@ -87,7 +92,7 @@ const calculateConMod = () => {
 
     // Display modifier
     conModHTML.innerHTML = `Con mod: ${conMod}`;      
-}
+};
 
 const calculateWisMod = () => {
     // Get the values of the attributes
@@ -101,7 +106,7 @@ const calculateWisMod = () => {
 
     // Display modifier
     wisModHTML.innerHTML = `Wis mod: ${wisMod}`;      
-}
+};
 
 const calculateIntMod = () => {
     // Get the values of the attributes
@@ -115,7 +120,7 @@ const calculateIntMod = () => {
 
     // Display modifier
     intModHTML.innerHTML = `Int mod: ${intMod}`;      
-}
+};
 
 const calculateChaMod = () => {
     // Get the values of the attributes
@@ -129,7 +134,7 @@ const calculateChaMod = () => {
 
     // Display modifier
     chaModHTML.innerHTML = `Cha mod: ${chaMod}`;      
-}
+};
 
 const calculateProfBonus = () => {
     const charLevel = document.getElementById("character-level-txt").value;
@@ -150,10 +155,70 @@ const calculateProfBonus = () => {
     else {
         profBonus.innerHTML = "+6";
     }
-}
+};
+
+/* Premade characters */
+const elara = () => {
+    /* Selectors */
+    const characterName = document.getElementById("character-name-txt");
+    const characterRace = document.getElementById("character-race");
+    const charaClass = document.getElementById("character-class");
+    const str = document.getElementById("strength-txt");
+    const dex = document.getElementById("dexerity-txt");
+    const con = document.getElementById("constitution-txt");
+    const wis = document.getElementById("wisdom-txt");
+    const int = document.getElementById("intelligence-txt");
+    const cha = document.getElementById("charisma-txt");
+
+    /* Sets the name of the character */
+    characterName.value = "Elara";
+
+    /* Set the value of "character-race" to "elf" */
+    characterRace.value = "elf";
+
+    /* Dispatch the "change" event on the "character-race" element */
+    const eventRace = new Event("change");
+    characterRace.dispatchEvent(eventRace);
+
+    /* Set the value of the attributes */
+    str.value = "8";
+    dex.value = "12";
+    con.value = "10";
+    int.value = "15";
+    wis.value = "13";
+    cha.value = "14";
+
+    /* Dispatch the "change" event on the attribute elements */
+    const eventStr = new Event("change");
+    str.dispatchEvent(eventStr);
+    const eventDex = new Event("change");
+    dex.dispatchEvent(eventDex);
+    const eventCon = new Event("change");
+    con.dispatchEvent(eventCon);
+    const eventWis = new Event("change");
+    wis.dispatchEvent(eventWis);
+    const eventInt = new Event("change");
+    int.dispatchEvent(eventInt);
+    const eventCha = new Event("change");
+    cha.dispatchEvent(eventCha);
+
+    /* Sets the class */
+    charaClass.value = "wizard";
+
+    /* Dispatch the "change" event on the "charaClass" element */
+    /* function not yet implemented */
+
+    /* Sets the Skill proficiencies */
+
+    /* Shows character creator if it was closed */
+    document.getElementById("character-creator").classList.remove("hidden");
+};
+
+
 
 window.onload = () => {
     document.getElementById("create-character").onclick = showOrHideCharacterCreator;
+    document.getElementById("manage-character").onclick = showOrHideCharacterManager;
     document.getElementById("character-race").onchange = determineSubRaces;
 
     // Calculate modifier functions
@@ -169,4 +234,11 @@ window.onload = () => {
 
     // From common-script
     document.getElementById("nav").onclick = showOrHide;
+
+    // Selecting characters
+    document.getElementById("elara").onclick = elara;
+    document.getElementById("thrain").onclick = elara;
+    document.getElementById("sylas").onclick = elara;
+    document.getElementById("aria").onclick = elara;
+    document.getElementById("drakar").onclick = elara;
 };

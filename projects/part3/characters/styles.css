@@ -44,6 +44,12 @@ h2 {
     display: none;
 }
 
+/* Manage characters */
+.character {
+   cursor: pointer; 
+}
+
+
 /* Larger resolutions */
 @media screen and (min-width: 480px) {
    .flex-container {
