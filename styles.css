@@ -118,6 +118,14 @@ a:active {
     display: none !important; 
 }
 
+/* Server side hello world */
+#server-side-hello-world h3{
+    color: #F26101;
+}
+
+#server-side-hello-world a{
+    margin-right: 2%;
+}
 
 /* Larger resolutions */
 @media only screen and (min-width: 600px) {
