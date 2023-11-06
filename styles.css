@@ -47,6 +47,7 @@ span {
     width: 100%;
     height: 100%;
 }
+
 /* Flex Container */
 .flex-container {
     display: flex;
@@ -118,12 +119,12 @@ a:active {
     display: none !important; 
 }
 
-/* Server side hello world */
-#server-side-hello-world h3{
+/* Render assignments */
+.render-assignment h3{
     color: #F26101;
 }
 
-#server-side-hello-world a{
+.render-assignment a{
     margin-right: 2%;
 }
 
